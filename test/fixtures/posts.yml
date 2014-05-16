@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyString
+  nudges: 1
+  topic_id: 1
+  topic_name: MyString
+  user_id: 1
+
+two:
+  message: MyString
+  nudges: 1
+  topic_id: 1
+  topic_name: MyString
+  user_id: 1
