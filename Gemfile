@@ -20,10 +20,14 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'rest-client'
+
 
 # Debuging
 group :development do 
 	gem "pry"
+	gem "better_errors"
+	gem "binding_of_caller"
 end
 # Authentication
 gem "omniauth-facebook"
@@ -40,6 +44,9 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# API DOC
+gem 'apipie-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

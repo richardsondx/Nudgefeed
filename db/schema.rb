@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516192107) do
+ActiveRecord::Schema.define(version: 20140516205238) do
 
   create_table "comments", force: true do |t|
     t.string   "message"
@@ -50,8 +50,6 @@ ActiveRecord::Schema.define(version: 20140516192107) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "username"
-    t.string   "password"
-    t.string   "password_confirmation"
     t.string   "email"
     t.integer  "nudges"
     t.text     "posts"
@@ -60,6 +58,11 @@ ActiveRecord::Schema.define(version: 20140516192107) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "topics"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "fullname"
+    t.string   "oauth_token"
+    t.string   "oauth_expires_at"
   end
 
 end

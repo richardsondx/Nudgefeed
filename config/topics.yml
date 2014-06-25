@@ -1,0 +1,33 @@
+topics:
+  art:
+    description: "Anything art related from painting, drawing to sculpting, music and singing"
+  money:
+    description: "Business financial, personal finance, Investments, stocks, real-estate, bitcoins"
+  entertainment:
+    description: "Celerity Gossip and People news"
+  sports:
+    description: "Football, Basketball, Rugby, UFC, et cetera"
+  business:
+    description: "resource, ideas, advice, networking, apps, acquisition etc..."
+  jobs:
+    description: "job posting and requests"
+  marketplace: 
+    description: "Anything for sale, for trade and else"
+  news:
+    description: "News & Headlines"
+  technology:
+    description: "technology, computer, internet and personal tech"
+  health: 
+    description: "Health news, medicine, diet fitness"
+  places: 
+    description: "Places, Travel News, Vaccation and Destination"
+  tv:
+    description: "TV Shows, Reality TV, Movies"
+  reading:
+    description: "Article, Book Recommendation"
+  politics:
+    description: "Election and Politic News"
+  deals:
+    description: "Discount and Deals alert"
+  funny:
+    description: "Anything good for a good laugh"

@@ -1,4 +1,67 @@
 Nudgefeed::Application.routes.draw do
+  apipie
+
+  # Authentication
+  get 'auth/:provider/callback', to: 'api/v1/sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'api/v1/sessions#destroy', as: 'signout'
+
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1 do
+
+      
+    
+      scope module: "main" do 
+       get "/", :action => :login
+       resources "main_topics", only: [:show, :index], :defaults => { :format => 'json' } do 
+         member do 
+           post "follow" => 'topics#follow'
+           post "unfollow" => 'topics#unfollow'
+         end
+       end
+      end
+      
+      resources :users, :defaults => { :format => 'json' } do
+       resources :topics, only: [:show, :index], :defaults => { :format => 'json' } do 
+          resources :posts do 
+           member do 
+             post "nudge" => 'posts#nudge'
+             post "unnudge" => 'posts#unnudge'
+           end
+           resources :comments, :defaults => { :format => 'json' }
+           collection do 
+             get "search"
+           end
+         end
+      
+         collection do 
+           get "search"
+         end
+      
+         member do 
+           get "nudges"
+         end
+      
+       end
+      
+       collection do
+         get "search"
+       end
+      
+       member do 
+         get "friends"
+         get "feed"
+         get "feeds/popular"
+         get "feeds/friends"
+       end
+      end
+    end
+  end
+
+  root "api/v1/main#login"
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
